@@ -5,7 +5,7 @@ import {
   attemptLogout,
 } from '../slices/auth';
 
-// import {API} from '../../services/api';
+// import API from '../../services/api/APIRoutes';
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -13,11 +13,9 @@ import {
 // code can then be executed and other actions can be dispatched
 export const login = payload => async dispatch => {
   try {
-    dispatch(loginSuccess(payload));
-
     // const res = await API.login(payload);
     // if (res.status.code == 200) {
-    //   dispatch(loginSuccess());
+    dispatch(loginSuccess(payload));
     // }
   } catch (error) {
     dispatch(loginFailed());

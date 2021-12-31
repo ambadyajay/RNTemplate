@@ -4,4 +4,5 @@ import {useSelector} from 'react-redux';
 // we can define a set of derived state values
 export default {
   state: useSelector(state => state.state),
+  token: useSelector(state => state.auth.token),
 };

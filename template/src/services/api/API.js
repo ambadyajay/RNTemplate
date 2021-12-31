@@ -1,26 +1,10 @@
-import {AxiosInstance as API} from './AxiosInstance';
+import axiosInstance from './AxiosInstance';
 
 export const api = {
-  get: async payload =>
-    await API.get('', payload.token, {
-      headers: {Authorization: token, ...additionalHeaders},
-    }),
-  post: async payload =>
-    await API.post('', payload.params, payload.token, {
-      headers: {Authorization: token, ...additionalHeaders},
-    }),
-  put: async payload =>
-    await API.update('', payload.params, payload.token, {
-      headers: {Authorization: token, ...additionalHeaders},
-    }),
-  delete: async payload =>
-    await API.delete('', payload.params, payload.token, {
-      headers: {Authorization: token, ...additionalHeaders},
-    }),
+  get: async url => await axiosInstance.get(url),
+  post: async (url, payload) => await axiosInstance.post(url, payload.params),
+  put: async (url, payload) => await axiosInstance.update(url, payload.params),
+  delete: async url => await axiosInstance.delete(url),
 };
 
-const apiRoutes = {
-  login: payload => api.post('/login', payload),
-};
-
-export default apiRoutes;
+export default api;

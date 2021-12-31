@@ -2,7 +2,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Platform} from 'react-native';
 
-import AppColor from '../constents';
+import AppColor from '../constants';
 
 import AppScreens from '../screens/app';
 

@@ -17,6 +17,7 @@ export const authSlice = createSlice({
       state.token = null;
       state.userId = null;
       state.didTryAutoLogin = true;
+      state.message = '';
     },
     loginSuccess: (state, action) => {
       state.userId = action.payload.userId;

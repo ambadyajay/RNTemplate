@@ -10,8 +10,6 @@ import StartupScreen from '../screens/landing';
 const RootNavigator = props => {
   const isAuth = useSelector(state => state.auth);
 
-  console.log('isAuth ', isAuth);
-
   SplashScreen.hide();
 
   return (

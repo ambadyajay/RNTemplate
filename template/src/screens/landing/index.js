@@ -3,7 +3,7 @@ import {ActivityIndicator, StyleSheet} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {Layout} from '@ui-kitten/components';
 
-import AppColor from '../../constents/AppColor';
+import AppColor from '../../constants/AppColor';
 
 // import * as authActions from '../../redux/actions/auth';
 
